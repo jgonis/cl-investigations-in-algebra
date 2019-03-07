@@ -1,3 +1,5 @@
 (in-package :investigations-in-algebra)
-(defun temp ()
-  (format t "Hello World!~%"))
+(defun tab (f start end)
+  (cond ((<= start end) 
+         (format t "~A . . . ~A~%" start (funcall f start))
+         (tab f (+ start 1) end))))
