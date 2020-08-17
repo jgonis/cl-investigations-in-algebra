@@ -41,3 +41,29 @@
 
 (defun exp1-1-m (x)
   (+ (* 3 (* x x)) 3))
+
+(defun prj1-2 (num-apples)
+  (let* ((cost 0.25)
+         (sale-price 0.32)
+         (eaten 2)
+         (overhead (* num-apples cost))
+         (revenue (* sale-price (- num-apples eaten)))
+         (profit (- revenue overhead)))
+    profit))
+
+(defun fahrenheit-to-celsius (temp)
+  (coerce (* (- temp 32) 5/9) 'float))
+
+(defun celsius-to-fahrenheit (temp)
+  (coerce (+ 32 (* temp 9/5)) 'float))
+
+(defun fahrenheit-to-newgrade (temp)
+  (coerce (+ 100 (* (- temp 32) 13/9)) 'float))
+(defun newgrade-to-fahrenheit (temp)
+  (coerce (+ 32 (* (- temp 100) 9/13)) 'float))
+
+(defun celsius-to-newgrade (temp)
+  (coerce (+ 100 (* temp 13/5)) 'float))
+(defun newgrade-to-celsius (temp)
+  (coerce (* (- temp 100) 5/13) 'float))
+
