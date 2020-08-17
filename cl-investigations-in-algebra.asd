@@ -23,5 +23,5 @@
                              (:file "algebratests"))))
   :perform (asdf:test-op (op system)
              (funcall (read-from-string 
-                       ":cl-investigations-in-algebra.tests:run-tests"))))
+                       "cl-investigations-in-algebra.tests:run-tests"))))
 
